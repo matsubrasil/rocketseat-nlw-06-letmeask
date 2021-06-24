@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 
-import illustrationImg from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
-import "./../styles/auth.scss";
+// import { useAuth } from "../hooks/useAuth";
+
 import { Button } from "../components/Button";
 
+import illustrationImg from "../assets/images/illustration.svg";
+import logoImg from "../assets/images/logo.svg";
+
+import "./../styles/auth.scss";
+
 export function NewRoom() {
+  // const { user } = useAuth();
+
   return (
     <div id="page-auth">
       <aside>
@@ -13,7 +19,6 @@ export function NewRoom() {
         <strong>Crie salas de Q&amp;A ao vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
       </aside>
-
       <main>
         <div className="main-content">
           <img src={logoImg} alt="letaskme" />
@@ -23,7 +28,6 @@ export function NewRoom() {
             <Button type="submit">Criar sala</Button>
           </form>
           <p>
-            {/* eslint-disable-next-line  */}
             Quer entrar em uma sala existente? <Link to="/">clique aqui</Link>
           </p>
         </div>
